@@ -1,0 +1,39 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.transistorsoft.backgroundgeolocation.react">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 2/3 [RELEASE:ADD] Add these in release -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="remove" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:node="remove" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove"/>
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:usesCleartextTraffic="true"
+      android:icon="@mipmap/ic_launcher"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+      <!-- 3/3 [RELEASE:REMOVE] Remove for release
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+      -->
+
+      <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCINS2dyuBipK8MZzOQnzyKdrS2I1_b5I4"/>
+
+      <meta-data android:name="com.transistorsoft.locationmanager.license" android:value="eb8ee62a24ca51c5d4c87f4fad356fb8660a6ae401b9d95642f7b80e7cc59c06" />
+
+    </application>
+
+</manifest>
